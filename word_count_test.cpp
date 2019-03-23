@@ -2,8 +2,6 @@
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
 #include <map>
-//#include "require_equal_containers.h"
-#define EXERCISM_RUN_ALL_TESTS
 
 using namespace std;
 
@@ -84,7 +82,7 @@ BOOST_AUTO_TEST_CASE(count_everything_just_once)
 {
     const map<string, int> expected{{"all", 2}, {"the", 2}, {"kings", 2}, {"horses", 1}, {"and", 1}, {"men", 1}};
     const auto actual = word_count::words("all the kings horses and all the kings men");
-    
+
     BOOST_TEST(expected == actual);
 }
 
